@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+<input type="text" name="Cars" id="Cars" onkeyup="Search()" placeholder="Search..">
+<button onclick="addItem()">Add Item</button>
+<p id="demo"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW", "Merzides-Benz", "Toyota", "Nissan", "Honda", "Ford" ];
+var result = "";
+var query = '';
+
+
+function Search(){
+	
+	var C = document.getElementById("Cars").value;
+    for(i=0; i < cars.length; i++){
+    	if(cars[i].indexOf(C) != -1){
+       		 result += cars[i] + "<br>" ;        
+     	}   
+    }
+	document.getElementById("demo").innerHTML = result;
+    result = ""; 
+}
+    
+function addItem() {
+	var add = document.getElementById("Cars").value;
+    cars.push(add);
+    document.getElementById("Cars").value = "";
+    search()
+    
+}
+
+
+Search()
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+function func(){
+	
+	query = document.getElementById("Cars").value;
+    var virtualCars = cars.slice();
+    while(virtualCars.findIndex(charExist) != -1) {
+    	var idx = virtualCars.findIndex(charExist);
+         result += virtualCars[idx] + "<br>" ;
+         virtualCars.splice(idx,1);
+    }
+   
+	document.getElementById("demo").innerHTML = result;
+    result = "";
+}
+func()
+
+function charExist(item) {
+	if(item.indexOf(query) != -1) return true;
+    return false;
+}
+*/
+
+
+</script>
+
+</body>
+</html>
+
