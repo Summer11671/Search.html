@@ -16,7 +16,7 @@ var query = '';
 function Search(){
 	
 	var C = document.getElementById("Cars").value;
-    for(i=0; i < cars.length; i++){
+    	for(i=0; i < cars.length; i++){
     	if(cars[i].indexOf(C) != -1){
        		 result += cars[i] + "<br>" ;        
      	}   
@@ -32,43 +32,8 @@ function addItem() {
     search()
     
 }
-
-
-Search()
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function func(){
 	
-	query = document.getElementById("Cars").value;
-    var virtualCars = cars.slice();
-    while(virtualCars.findIndex(charExist) != -1) {
-    	var idx = virtualCars.findIndex(charExist);
-         result += virtualCars[idx] + "<br>" ;
-         virtualCars.splice(idx,1);
-    }
-   
-	document.getElementById("demo").innerHTML = result;
-    result = "";
-}
-func()
-
-function charExist(item) {
-	if(item.indexOf(query) != -1) return true;
-    return false;
-}
-*/
-
+Search()
 
 </script>
 
